@@ -1,0 +1,6 @@
+# DocConcord has ZERO runtime dependencies.
+# The entire engine (parser, rules, reporters, CLI) uses only the Python
+# standard library, so this file is intentionally empty.
+#
+# Install the tool itself with:  pip install .
+# Optional development extras:    pip install -e ".[dev]"

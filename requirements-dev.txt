@@ -1,0 +1,3 @@
+# Optional development-only dependencies. Not needed to run DocConcord.
+pytest>=7.0
+build>=1.0

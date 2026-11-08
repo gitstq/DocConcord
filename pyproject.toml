@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "docconcord"
+version = "1.0.0"
+description = "Zero-dependency, offline-first parity auditor for multilingual Markdown documentation"
+readme = "README.en.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "gitstq" }]
+maintainers = [{ name = "gitstq" }]
+keywords = [
+    "documentation", "i18n", "linter", "markdown", "readme",
+    "ci", "developer-tools", "static-analysis",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Documentation",
+    "Topic :: Software Development :: Quality Assurance",
+    "Typing :: Typed",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "build>=1.0"]
+
+[project.urls]
+Homepage = "https://github.com/gitstq/DocConcord"
+Repository = "https://github.com/gitstq/DocConcord"
+Issues = "https://github.com/gitstq/DocConcord/issues"
+Changelog = "https://github.com/gitstq/DocConcord/blob/main/CHANGELOG.md"
+
+[project.scripts]
+docconcord = "docconcord.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["docconcord*"]
+
+[tool.setuptools]
+include-package-data = true
+zip-safe = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

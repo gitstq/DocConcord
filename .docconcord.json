@@ -1,0 +1,9 @@
+{
+  "base": "",
+  "format": "text",
+  "fail_on": "error",
+  "online": false,
+  "aliases": {},
+  "disabled_rules": [],
+  "max_file_bytes": 2000000
+}
