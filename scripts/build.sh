@@ -21,9 +21,9 @@ echo "==> writing SHA256SUMS"
 (
   cd dist
   if command -v sha256sum >/dev/null 2>&1; then
-    sha256sum ./*.whl ./*.tar.gz > SHA256SUMS
+    sha256sum *.whl *.tar.gz > SHA256SUMS
   else
-    shasum -a 256 ./*.whl ./*.tar.gz > SHA256SUMS
+    shasum -a 256 *.whl *.tar.gz > SHA256SUMS
   fi
 )
 
